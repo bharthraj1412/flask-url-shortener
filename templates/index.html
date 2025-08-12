@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TinyURL Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to TinyURL!</h1>
+    <form action="/" method="POST">
+    <input type="text" name="url" placeholder="Enter URL to shorten" required>
+    <button type="submit">Shorten URL</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    <h2><br>Shortened URLs</h2>
+</body>
+</html>

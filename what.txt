@@ -1,0 +1,12 @@
+Simple flask application with sqlite mimicking tinyurl. Sort of : )
+- it should be a flask application
+- it should use sqlite with sqlalchemy
+- should be able to add a new url
+- it should be able to save the new url and the shortened version to the database
+- it should return the shortened url as a flash message
+- if the shortened url is called, it should redirect to the original url
+- in the database the shortened urls should be unique
+- it should accept the same input url more than once
+- it should NOT be production ready
+- it should have a dedicated 404 page
+- it should have a dedicated 500 page
