@@ -16,7 +16,7 @@ def index():
         with SessionLocal() as session:
             session.add(new_entry)
             session.commit()
-            flash(f"{original_url} was saved successfully! Short URL: {short_url}\n")
+            flash(f"{original_url} was saved successfully! \n Short URL: https://flask-url-shortener-1-aof3.onrender.com/{short_url}\n")
     return render_template('index.html')
 
 @app.route('/<short_url>')
@@ -31,3 +31,4 @@ def redirect_short_url(short_url):
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+
